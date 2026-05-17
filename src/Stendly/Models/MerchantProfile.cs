@@ -2,6 +2,14 @@ using System.Text.Json.Serialization;
 
 namespace Stendly.Models;
 
+public enum VerificationStatus
+{
+    Unverified = 0,
+    Pending = 1,
+    Verified = 2,
+    Rejected = 3,
+}
+
 /// <summary>
 /// Merchant profile information.
 /// Sensitive fields like API keys and webhook secrets are only shown once upon generation.
@@ -46,8 +54,17 @@ public record MerchantProfile
     public string? RawApiKey { get; init; }
 
     /// <summary>
-    /// KYB verification status (pending, verified, rejected).
+    /// KYB verification status.
     /// </summary>
     [JsonPropertyName("verificationStatus")]
-    public string? VerificationStatus { get; init; }
+    public VerificationStatus? VerificationStatus { get; init; }
+
+    /// <summary>
+    /// Human-readable verification status label.
+    /// </summary>
+    [JsonIgnore]
+    public string VerificationStatusLabel =>
+        VerificationStatus.HasValue
+            ? VerificationStatus.Value.ToString()
+            : "Unknown";
 }

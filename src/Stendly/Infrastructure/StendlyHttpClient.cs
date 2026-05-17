@@ -33,7 +33,7 @@ internal sealed class StendlyHttpClient : IDisposable
         _apiKey = apiKey ?? throw new ArgumentNullException(nameof(apiKey));
         _maxRetries = maxRetries;
 
-        _userAgent = new ProductInfoHeaderValue("dotnet-sdk-sdk", "0.1.0");
+        _userAgent = new ProductInfoHeaderValue("dotnet-sdk", "0.1.0");
     }
 
     /// <summary>

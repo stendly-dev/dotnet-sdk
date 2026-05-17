@@ -97,6 +97,7 @@ public sealed class StendlyClient : IStendlyClient, IDisposable
                 environment == "devnet" ? DefaultUrls.Devnet : DefaultUrls.Mainnet);
         }
 
+        Environment = environment;
         _http = new StendlyHttpClient(httpClient, apiKey, maxRetries);
 
         // Initialize sub-clients
@@ -104,6 +105,24 @@ public sealed class StendlyClient : IStendlyClient, IDisposable
         Terminals = new TerminalsClient(_http);
         Webhooks = new WebhooksClient(_http);
         Merchant = new MerchantClient(_http);
+    }
+
+    /// <summary>
+    /// Gets the configured environment name.
+    /// </summary>
+    public string Environment { get; }
+
+    /// <summary>
+    /// Build a public checkout URL for a payment intent.
+    /// </summary>
+    /// <param name="intentId">Payment intent UUID.</param>
+    /// <returns>Full URL to the checkout page.</returns>
+    public string InvoiceUrl(string intentId)
+    {
+        var appUrl = Environment == "devnet"
+            ? "https://app-devnet.stendly.com"
+            : "https://app.stendly.com";
+        return $"{appUrl}/checkout?invoice={intentId}";
     }
 
     /// <inheritdoc />

@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>Stendly</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.2.0</Version>
     <Authors>Stendly Team</Authors>
     <Description>Stendly .NET SDK - Non-custodial USDC payments on Solana. Official .NET client for the Stendly API.</Description>
     <PackageTags>stendly;solana;usdc;payments;payment-gateway;crypto;blockchain</PackageTags>
