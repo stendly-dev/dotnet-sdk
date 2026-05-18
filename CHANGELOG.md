@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1] - 2026-05-18
+
+### Added
+- 'Accept USDC payments in your .NET applications with 0% merchant fees, instant settlement, and no chargebacks.' text to README.md (SEO)
+
+### Added
+
 ## [0.2.0] - 2026-05-17
 
 ### Added

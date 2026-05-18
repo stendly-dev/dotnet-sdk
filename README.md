@@ -1,6 +1,6 @@
 # Stendly .NET SDK
 
-Non-custodial payments on Solana — official .NET SDK for [Stendly API](https://stendly.com).
+Non-custodial payments on Solana — official .NET SDK for [Stendly API](https://stendly.com). Accept USDC payments in your .NET applications with 0% merchant fees, instant settlement, and no chargebacks.
 
 [![NuGet version](https://img.shields.io/nuget/v/Stendly.svg)](https://www.nuget.org/packages/Stendly/)
 [![.NET](https://img.shields.io/badge/.NET-8.0+-blue.svg)](https://dotnet.microsoft.com/)
