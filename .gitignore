@@ -1,0 +1,73 @@
+﻿./docs/
+
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.log
+logs/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+.expo/
+.expo-shared/
+
+# Expo / React Native
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.iml
+*.ipr
+*.iws
+
+# Secrets
+.env.local
+.env.*.local
+appsettings.Secrets.json
+appsettings.*.local.json
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Test results
+[Tt]est[Rr]esult*/
+*[Tt]est[Rr]esults*.xml
+coverage/
+*.coverage
+*.coveragexml
+
+# Rider
+.reSharper/
+*.sln.iml
